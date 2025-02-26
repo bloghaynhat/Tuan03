@@ -1,0 +1,49 @@
+.footer-container{
+    width: 100%;
+    height: 200px;
+    background-color: #1d2228;
+
+    position: absolute;
+    top: 575px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+.enter-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-1 input{
+    background-color: white;
+    border-radius: 10px;
+    height: 38px;
+    width: 300px;
+    margin: 10px;
+}
+
+.div-1 button{
+    background-color: #e16592;
+    width: 100px;
+}
+
+.div-2{
+
+}
+
+.div-2-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.div-2-con a{
+    color: #c0c3ca;
+    margin-bottom: 8px;
+}
