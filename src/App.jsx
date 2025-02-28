@@ -1,23 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NavBar from './Header/NavBar'
-import MyBody from './Body/MyBody'
-import MyFooter from './Footeer/MyFooter'
-import LaiXuat from './LaiXuat/LaiXuat'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import LaiXuat from "./LaiXuat/LaiXuat";
+import { Routes, Route } from "react-router-dom";
+import Chefify from "./Chefify/Chefify";
+
 function App() {
-
   return (
-    <>
-      {/* <NavBar className="header"/> 
-      <MyBody className="body"/>
-      <MyFooter className="footer"/> */}
-
-      <LaiXuat/>
-    </>
-      
-  )
+    <div>
+      <Routes>
+        <Route path="/" element={<Chefify />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
