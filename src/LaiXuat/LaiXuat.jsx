@@ -7,6 +7,8 @@ function LaiXuat() {
     const [b, setB] = useState(0);
     const [c, setC] = useState(0);
 
+    const [data, setData] = useState([]);
+
     let rows = [];
     let soTienNhanDuoc = 0;
     let soTienBanDau = a;
@@ -24,6 +26,8 @@ function LaiXuat() {
            )
            soTienBanDau = soTienNhanDuoc;
         }
+        
+        setData(rows);
     }
 
     function handleChangeA(e){
@@ -38,13 +42,13 @@ function LaiXuat() {
         setC(e.target.value);
     }
 
-    return ( <div className="container">
+    return ( <div className="container max-w-10/12 m-auto">
         <img src={invest} alt="" />
-        <input type="text" name="" id="" placeholder="Nhap so tien ban dau" onChange={handleChangeA}/>
-        <input type="text" placeholder="Nhap lai xuat" onChange={handleChangeB}/>
-        <input type="text" name="" id="" placeholder="Nhap so tien muon nhan" onChange={handleChangeC}/>
+        <input type="text" name="" id="" placeholder="Nhap so tien ban dau" onChange={handleChangeA} className="border-1 border-gray-500 rounded-lg p-2"/>
+        <input type="text" placeholder="Nhap lai xuat" onChange={handleChangeB} className="border-1 border-gray-500 rounded-lg p-2"/>
+        <input type="text" name="" id="" placeholder="Nhap so tien muon nhan" onChange={handleChangeC} className="border-1 border-gray-500 rounded-lg p-2"/>
 
-        <button onClick={onClick}>Click</button>
+        <button onClick={onClick} className="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-green-200 cursor-pointer">Click</button>
 
         <table>
             <tr>
@@ -54,7 +58,7 @@ function LaiXuat() {
                 <th>So tien nhan</th>
             </tr>
             <tbody>
-                {rows}
+                {data}
             </tbody>
         </table>
     </div> );

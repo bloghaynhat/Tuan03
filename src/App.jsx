@@ -11,6 +11,7 @@ function App() {
   return (
     <div>
       <Routes>
+        <Route path="/laixuat" element={<LaiXuat />} />
         <Route path="/" element={<Chefify />} />
         <Route path="/2" element={<Chefify2/>}></Route>
       </Routes>
