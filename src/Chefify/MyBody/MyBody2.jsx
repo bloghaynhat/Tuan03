@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import MyCard from '../MyCard'
 
 const MyBody2 = () => {
     const category = ['Saved Recipes', 'Folders', 'Recipes by Genevive']
@@ -60,17 +61,7 @@ const MyBody2 = () => {
 
         <div className='mt-4 flex flex-wrap gap-5 m-auto justify-center items-center'>
             {data.map((item) => {
-                return <div className='border-1 border-gray-500/50 rounded-lg w-60'><img src={item.img} alt="" className='w-full h-40 object-cover rounded-t-lg'/>
-                <div className='flex flex-col justify-between p-3 gap-3'>
-                    <div className='flex items-center justify-between'><div className='font-semibold w-4/5'>{item.name}</div>
-                    <button className='rounded-full border-1 p-1 border-[#e6749d]'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#e6749d]">
-                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
-                                            </svg>
-                        </button></div>
-                
-                <div className='bg-[#fcf0f4] text-[#e6749d] px-3 py-1 rounded-xl w-fit'>{item.time} minutes</div>
-                </div>
-                </div>
+                return <MyCard img={item.img} name={item.name} time={item.time}/>
             })}
         </div>
     </div>
